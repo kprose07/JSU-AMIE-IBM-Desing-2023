@@ -1,0 +1,16 @@
+.navbar{
+   height:80px; 
+   font-size: 20px;
+   background-color: #326273 !important;
+   color: white;
+
+}
+.nav-link{
+    color: white;
+}
+.nav-link:hover{
+    color: #EEEEEE;
+}
+.container{
+    margin:10px;
+}
