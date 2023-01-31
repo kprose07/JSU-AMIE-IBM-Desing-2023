@@ -1,16 +1,32 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import App from './App';
+import Home from './pages/Home';
+import About from './pages/About';
+import Solution from './pages/Solution';
 
 //import App from './App';
 import Nav from './components/navbar.js';
-
+import ScrollUp from './components/scrolltop';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Nav />
+    <BrowserRouter>
+        <ScrollUp />
+      <Routes>
+        <Route path="/" element={<App/>}>
+          <Route index element={<Home />} />
+          <Route path="Home" element={<Home />} />
+          <Route path="About" element={<About />} />
+          <Route path="Solution" element={<Solution />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   </React.StrictMode>
 );
 
